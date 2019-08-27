@@ -1,0 +1,8 @@
+---
+layout: layouts/default.njk
+title: Lista de posts
+---
+
+{%- for photo in photos -%}
+	<img src="{{ photo.thumbnailUrl }}" alt="{{ photo.title }}">
+{%- endfor -%}

@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.postsOrdenados
+  size: 2
+permalink: posts/{{ pagination.pageNumber }}/index.html
+---
+
+<ol>
+{%- for item in pagination.items %}
+  <li><a href="{{ item.data.page.url }}">{{ item.data.title }}</a></li>
+{% endfor -%}
+</ol>
+
+{% if pagination.pageLinks.length > 1 %}
+<nav>
+  {% if pagination.previousPageLink %}
+    <a href="{{ pagination.previousPageHref | url }}">Anteriores</a>
+  {% endif %}
+  {% if pagination.nextPageLink %}
+    <a href="{{ pagination.nextPageHref | url }}">Siguientes</a>
+  {% endif %}
+</nav>
+{% endif %}

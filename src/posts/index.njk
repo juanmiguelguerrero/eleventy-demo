@@ -1,0 +1,10 @@
+---
+layout: layouts/default.njk
+title: Lista de posts
+---
+
+<ul>
+{%- for post in collections.postsOrdenados -%}
+  <li><a href="{{ post.data.page.url }}">{{ post.data.title }} [{{ post.data.page.date }}]</a></li>
+{%- endfor -%}
+</ul>

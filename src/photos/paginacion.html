@@ -1,0 +1,21 @@
+---
+pagination:
+  data: photos
+  size: 10
+permalink: photos/{{ pagination.pageNumber }}/index.html
+---
+
+{%- for photo in pagination.items %}
+  <img src="{{ photo.thumbnailUrl }}" alt="{{ photo.title }}">
+{% endfor -%}
+
+{% if pagination.pageLinks.length > 1 %}
+<nav>
+  {% if pagination.previousPageLink %}
+    <a href="{{ pagination.previousPageHref | url }}">Anteriores</a>
+  {% endif %}
+  {% if pagination.nextPageLink %}
+    <a href="{{ pagination.nextPageHref | url }}">Siguientes</a>
+  {% endif %}
+</nav>
+{% endif %}
