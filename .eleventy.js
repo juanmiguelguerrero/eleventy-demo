@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy('src/images')
 	eleventyConfig.addPassthroughCopy('src/css/assets')
+	eleventyConfig.addPassthroughCopy('src/admin/config.yml')
 	// TODO: Incluir archivos configuración redirecciones Netlify
 
 	eleventyConfig.addCollection("postsOrdenados", function (collection) {
