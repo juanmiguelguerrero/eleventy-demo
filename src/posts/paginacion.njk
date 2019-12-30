@@ -1,9 +1,13 @@
 ---
+pepe: jor
 pagination:
   data: collections.postsOrdenados
-  size: 5
-permalink: posts/{{ z }}/index.html
+  size: 1
+  alias: posts
+permalink: posts/{{ pagination.pageNumber }}-{{ posts.data.title.slice(0,3) }}/index.html
 ---
+
+{{ pepe | dump  }}
 
 <ol>
 {%- for item in pagination.items %}

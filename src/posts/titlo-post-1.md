@@ -3,8 +3,9 @@ layout: layouts/default.njk
 title: Titulo del post 1
 tags: posts
 date: Last Modified
-metadata: 
-  - description: jajaja1
+metadata:
+  description: sdadas
+  keywords: manuel
 ---
 
 # {{ title }}
@@ -14,5 +15,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vel praesentiu
 sasa sad asd asd
 s
 
-{{ metadata[0].description }}
+{{ metadata.description }} 
+
+{{ metadata.keywords }}
 
